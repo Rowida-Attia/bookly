@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:bookly/Features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_list_view_item.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/featureed_list_view.dart';
@@ -26,6 +28,9 @@ class HomeViewBody extends StatelessWidget {
             'Best Seller',
             style: Styles.textStyle18,
           ),
+          SizedBox(
+            height: 20,
+          ),
           BestSellerListViewItem(),
         ],
       ),
@@ -53,6 +58,22 @@ class BestSellerListViewItem extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+          const SizedBox(
+            width: 30,
+          ),
+          Column(
+            children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.5,
+                child: const Text(
+                  'Harry Potter and the Goblet of Fire',
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: Styles.textStyle20,
+                ),
+              ),
+            ],
           )
         ],
       ),
