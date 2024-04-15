@@ -2,6 +2,7 @@ import 'package:bookly/Features/home/presentation/views/widgets/book_rating.dart
 import 'package:bookly/Features/home/presentation/views/widgets/box_action.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_details_appBar.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_image_item.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/similar_books_list_view.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/core/widgets/custom_buttom.dart';
 import 'package:flutter/cupertino.dart';
@@ -21,7 +22,7 @@ class BookDetailsViewBody extends StatelessWidget {
         children: [
           const CustomBookDetailsAppBar(),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * .2),
+            padding: EdgeInsets.symmetric(horizontal: width * .3),
             child: const CustomBookImage(),
           ),
           const SizedBox(
@@ -53,8 +54,28 @@ class BookDetailsViewBody extends StatelessWidget {
             height: 37,
           ),
           const BookAction(),
+          const SizedBox(
+            height: 50,
+          ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'You can also like',
+              style: Styles.textStyle14.copyWith(
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          const SimilarBooksListView(),
+          /*  const SizedBox(
+            height: 40,
+          ),*/
         ],
       ),
     );
   }
 }
+
