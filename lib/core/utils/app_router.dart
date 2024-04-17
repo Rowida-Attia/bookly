@@ -18,7 +18,7 @@ abstract class AppRouter {
         path: kSearchView,
         builder: (context, state) => const SearchView(),
       ),
-       GoRoute(
+      GoRoute(
         path: kHomeView,
         builder: (context, state) => const HomeView(),
       ),
