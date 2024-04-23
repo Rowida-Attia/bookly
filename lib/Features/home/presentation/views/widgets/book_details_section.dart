@@ -17,7 +17,6 @@ class BookDetailsSection extends StatelessWidget {
           child: const CustomBookImage(
             imageUrl:
                 'https://hips.hearstapps.com/hmg-prod/images/sacred-lotus-gettyimages-1143403162-646fa5a441f5d.jpg?crop=0.535xw:1.00xh;0.0519xw,0&resize=980:*',
-                
           ),
         ),
         const SizedBox(
@@ -43,6 +42,8 @@ class BookDetailsSection extends StatelessWidget {
           height: 18,
         ),
         const BookRating(
+          rating: 5,
+          count: 250,
           mainAxisAlignment: MainAxisAlignment.center,
         ),
         const SizedBox(
